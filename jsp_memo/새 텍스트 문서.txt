@@ -1,0 +1,38 @@
+DB(Database)란?
+- 체계화된 데이터의 집합체.
+- 대규모 데이터 공유와 효과적인 운영을 위한 저장소.
+
+데이터베이스의 장점
+- 데이터 중복 최소화.
+- 데이터 공유.
+- 일관성, 무결성, 보안성 유지.
+
+DBMS(Database Management System)이란?
+- 저장,조회,수정,삭제 등의 여러가지 명령을 사용할 수 있는 데이터베이스 관리 프로그램.
+- 종류 : Oracle Database, MySql, MS-sql, mariaDB, PostgreSQL 등.
+- CRUD를 할 수 있다.	
+		단어				의미			SQL
+		C : Create		생성			CREATE
+		R : Read			조회			SELECT
+		U : Update		갱신			UPDATE, ALTER
+		D : Delete		삭제			DELETE, DROP
+
+Oracle SQL의 특징
+- 대소문자를 가리지 않는다.
+- 문자열 표기는 외따옴표(")를 사용한다.
+- 이름을 지을 때 띄어쓰기 대신 '_'를 사용한다. (작명 규칙)
+- '모든(ALL)' 이라는 의미로 '*' 을 사용한다.
+
+메모장에 복사/붙여넣기 활용.
+SELECT USERNAME FROM DBA_USERS;
+CREATE USER myJsp IDENTIFIED BY jsppassword;
+
+CL SCR; 
+- 커맨드라인창에 내용을 지울수 있음.
+F7
+- 지금까지 사용했던 명령어를 사용할 수 있음.
+SELECT DBMS_XDB.GETHTTPPORT() FROM DUAL;
+DBMS_XDB.GETHTTPPOR()
+-------------------------------
+					8080
+- GETHTTP포트번호를 호출하는 메소드

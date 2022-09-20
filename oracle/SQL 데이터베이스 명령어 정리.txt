@@ -1,0 +1,62 @@
+DML - 테이블에 저장된 데이터가 대상입니다.
+
+*데이터 조회 : SELECT 명령어
+- SELECT 컬럼명1,컬럼명2,... FROM 테이블명;
+	ㄴ 조회하고자 하는 컬럼을 select 뒤에 불러오고 해당 테이블명을 입력하고 실행.
+
+- SELECT * FROM 테이블명; 
+	ㄴ 모든 컬럼을 선택할때는 *를 붙여서 실행.
+
+- SELECT * FROM 테이블명 WHERE 조건식 ;
+	ㄴ 데이터를 조회할때에 조건을 추가하고 싶을땐 테이블명 뒤에 WHERE 붙여준다.
+
+- SELECT * FROM 테이블명 WHERE 컬럼명 IS NULL ;
+	ㄴ null 값 데이터를 조회하고 싶을때는 is null을 사용. 반대로는 is not null 사용.
+
+- SELECT 함수(컬럼명) FROM 테이블명 ;
+	ㄴ 데이터를 조회할때 함수명(count, sum, avg, max, min)을 이용하여 사용.
+
+- SELECT * FROM 테이블명 WHERE 컬럼명 IN (조건) ;
+	ㄴ 데이터 조회 조건식에 IN 또는 NOT IN, OR을 써서 조건식 대신에 사용할 수 있다.
+
+*테이블 생성 : CREATE TABLE 명령어
+- CREATE TABLE 테이블명 ( 컬럼명 );
+	ㄴ 테이블을 생성할 수 있고 안에 컬럼까지 원하는 조건에 맞게 생성할 수 있다.
+
+*데이터 추가 : INSERT
+- INSERT INTO 스피치명.테이블명(컬럼명) VALUES (데이터)
+	ㄴ 데이터를 추가할 수 있고 데이터를 추가할 때에는 컬럼 조건식에 맞게 데이터를 추가해야 한다.
+
+*제약 조건(CONSTRAINT) 설정
+	①기본키 
+	  - 특징 : 중복된 값과 NULL은 허용이 안됩니다.
+	  - 테이블을 생성하면서 제약 조건을 거는데 컬럼명 뒤에 PRIMARY KEY 작성.
+
+	②외래키 
+	  - 특징 : 다른테이블에서 값을 참조하고 NULL 허용 안합니다.
+	  - 외래키는 컬럼의 데이터가 참조값(다른테이블 컬럼)을 사용하게 하는것이 목적입니다.
+	
+	CREATE TABLE tbl_buy#(
+		buy_seq number(8) ,		
+		custom_id varchar2(20),
+		pcode varchar2(20),
+		quantity number(5) NOT NULL ,		
+		buy_date timestamp ,
+	
+	CONSTRAINT pk_buy_seq PRIMARY KEY(buy_seq),
+	CONSTRAINT fk_custom_id FOREIGN KEY (custom_id) -- 이 테이블의 컬럼명
+		REFERENCES tbl_custom#(custom_id),	--참조테이블과 그 컬럼명
+	CONSTRAINT fk_pcode FOREIGN KEY (pcode)
+		REFERENCES tbl_product#(pcode)
+		);
+
+	ㄴ 외래키는 CONSTRAINT 제약 조건을 주고 FOREIGN KEY를 이용해서 외래키를 지정해준다.
+
+*UPDATE 형식 : 컬럼이름, 값을 수정할때 사용.
+- UPDATE 테이블명
+- SET 수정할 컬럼이름 = 값을 , 로 구분해서 나열
+- WHERE 수정할 행에 대한 조건식.
+
+
+
+
