@@ -32,3 +32,5 @@ values('ªÔ∞¢±Ëπ‰',800,'21-07-01','CJ',22);
 
 select * from member;
 select * from member where member_name = 'æ∆¿Ã¿Ø';
+
+CREATE INDEX idx_member_name ON member(member_name);
