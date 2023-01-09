@@ -34,3 +34,20 @@ select * from member;
 select * from member where member_name = '¾ÆÀÌÀ¯';
 
 CREATE INDEX idx_member_name ON member(member_name);
+
+CREATE VIEW member_view
+AS
+SELECT * FROM member;
+
+SELECT * FROM member_view;
+
+DELIMITER //
+CREATE PROCEDURE myProc()
+BEIGN
+SELECT * FROM member WHERE member_name = '³ªÈÆ¾Æ';
+SELECT * FROM product WHERE product_name = '»ï°¢±è¹ä';
+END //
+DELIMITER;
+
+CALL myProc();
+	
