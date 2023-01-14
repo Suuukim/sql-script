@@ -49,5 +49,4 @@ SELECT * FROM product WHERE product_name = '»ï°¢±è¹ä';
 END //
 DELIMITER;
 
-CALL myProc();
-	
+CALL myProc(); --
