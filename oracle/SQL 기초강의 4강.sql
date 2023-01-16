@@ -1,4 +1,5 @@
--- SQL 기초강의 유투브
+-- SQL 기초강의 유투브\
+-- 빨리 업데이트 하고싶네요 
 
 create table member(
 	member_id varchar2(8) not null,		-- 아이디
