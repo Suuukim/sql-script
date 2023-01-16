@@ -1,3 +1,5 @@
+-- SQL 기초강의 유투브
+
 create table member(
 	member_id varchar2(8) not null,		-- 아이디
 	member_name varchar2(10) not null,	-- 회원 이름
@@ -49,4 +51,5 @@ SELECT * FROM product WHERE product_name = '삼각김밥';
 END //
 DELIMITER;
 
-CALL myProc(); --coinstar
+CALL myProc(); --coinstar 
+
