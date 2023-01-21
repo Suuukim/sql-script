@@ -53,4 +53,6 @@ END //
 DELIMITER;
 
 CALL myProc(); --coinstar 
+--즐거운 설날입니다
+
 
