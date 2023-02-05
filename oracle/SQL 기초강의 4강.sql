@@ -52,7 +52,6 @@ SELECT * FROM product WHERE product_name = '»ο°Ά±θΉδ';
 END //
 DELIMITER;
 
-CALL myProc(); --coinstar 
---Αρ°ΕΏξ Ό³³―ΐΤ΄Ο΄Ω
+CALL myProc();
 
 
