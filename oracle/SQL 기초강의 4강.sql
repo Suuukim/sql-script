@@ -55,3 +55,4 @@ DELIMITER;
 CALL myProc();
 -- test 연습
 -- test 2 연습
+-- test 3 연스ㅓㅂㅈ
