@@ -55,4 +55,4 @@ DELIMITER;
 CALL myProc();
 -- test 尻柔
 -- test 2 尻柔
--- test 3 尻什っげじびびたびびたい
+-- test 3 尻什っげじびびたびびたいしいしいしいしいしいしい
